@@ -26,4 +26,4 @@ Example above prints *"Objects are different."*
 ## Notes
 Be sure you dont name other function as CompareAA!
 Use and abuse! 
-And for those how dont know, BrightScript language is used for Roku channels development.
+And for those who dont know, BrightScript language is used for Roku channels development.
