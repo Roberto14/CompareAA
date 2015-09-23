@@ -21,6 +21,7 @@ else
   print "Objects are different."
 end if
 ```
+Example above prints *"Objects are different."*
 
 ## Notes
 Be sure you dont name other function as CompareAA!
