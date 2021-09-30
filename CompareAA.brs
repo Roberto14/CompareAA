@@ -16,7 +16,11 @@ Function CompareAA(aa1,aa2) as Boolean
                     equals = false
                 end if
             else
-                if type(aa1[prop]) <> type(aa2[prop]) 
+                typeAa1Prop = type(aa1[prop])
+                typeAa2Prop = type(aa2[prop])
+                if typeAa1Prop = "roString" then typeAa1Prop = "String"
+                if typeAa2Prop = "roString" then typeAa2Prop = "String"
+                if typeAa1Prop <> typeAa2Prop
                     equals = false 
                 else
                     if aa1[prop] <> aa2[prop] then
