@@ -16,7 +16,9 @@ Function CompareAA(aa1,aa2) as Boolean
                     equals = false
                 end if
             else
-                if type(aa1[prop]) <> type(aa2[prop]) 
+                mappedeAa1PropType = mapIntrinsicType(type(aa1[prop]))
+                mappedeAa2PropType = mapIntrinsicType(type(aa2[prop]))
+                if mappedeAa1PropType <> mappedeAa2PropType
                     equals = false 
                 else
                     if aa1[prop] <> aa2[prop] then
@@ -34,6 +36,22 @@ Function CompareAA(aa1,aa2) as Boolean
     next
     
     return equals
+End Function
+
+Function mapIntrinsicType(type as String) as String
+    mapType = type
+    if type = "roString"
+        mapType = "String"
+    else if type = "roInt"
+        mapType = "Integer"
+    else if type = "roFloat"
+        mapType = "Float"
+    else if type = "roLongInteger"
+        mapType = "LongInteger"
+    else if type = "roBoolean"
+        mapType = "Boolean"
+    end if
+    return mapType
 End Function
 
 Function DoesExist(array, prop) as Boolean
